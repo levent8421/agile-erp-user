@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import {operationsTable as userOperationsTable} from './userActions';
+import {operationsTable as consoleOperationsTable} from './consoleAction';
 
 const mapStateForComponent = (state, props) => {
     return {
@@ -21,7 +22,8 @@ const mapActionForComponent = (dispatch, props) => {
     return {
         ...props,
         actions: {
-            ...asDispatchedProps(dispatch, userOperationsTable)
+            ...asDispatchedProps(dispatch, userOperationsTable),
+            ...asDispatchedProps(dispatch, consoleOperationsTable),
         },
     };
 };

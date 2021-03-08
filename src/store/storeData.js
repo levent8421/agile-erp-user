@@ -5,6 +5,10 @@ const data = {
     token: {
         tokenStr: token,
         user: {},
+    },
+    title: {
+        title: 'Agile-ERP',
+        subTitle: 'Agile-ERP',
     }
 };
 

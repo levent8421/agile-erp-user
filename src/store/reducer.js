@@ -1,5 +1,6 @@
 import data from './storeData';
 import userReducer from './userReducer';
+import consoleReducer from './consoleReducer';
 
 class SimpleReducer {
     constructor() {
@@ -9,7 +10,7 @@ class SimpleReducer {
     handle(state = data, action) {
         const {type} = action;
         if (!(type in this.handlerTable)) {
-            console.warn('Can not handle action', action);
+            // console.warn('Can not handle action', action);
             return state;
         }
         const handler = this.handlerTable[type];
@@ -26,6 +27,7 @@ class SimpleReducer {
 const simpleReducer = new SimpleReducer();
 
 userReducer(simpleReducer);
+consoleReducer(simpleReducer);
 
 const reducer = (state = data, action) => {
     return simpleReducer.handle(state, action);

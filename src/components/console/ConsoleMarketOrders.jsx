@@ -1,21 +1,21 @@
 import React, {Component} from 'react';
 import mapStore from '../../store/storeAutoMapper';
 
-class ConsoleHome extends Component {
+class ConsoleMarketOrders extends Component {
     state = {};
 
     componentDidMount() {
         const {setTitle} = this.props.actions;
-        setTitle('统计分析', 'ERP 统计分析');
+        setTitle('市场订单管理', 'Market orders');
     }
 
     render() {
         return (
-            <div>
-                统计分析
+            <div className="market-orders">
+                市场订单
             </div>
         );
     }
 }
 
-export default mapStore(ConsoleHome);
+export default mapStore(ConsoleMarketOrders);

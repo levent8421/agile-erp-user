@@ -1,7 +1,11 @@
 const storage = sessionStorage;
 
 export function storageSave(key, value) {
-    return storage.setItem(key, value);
+    if (value) {
+        return storage.setItem(key, value);
+    } else {
+        return storage.removeItem(key);
+    }
 }
 
 export function storageGet(key) {

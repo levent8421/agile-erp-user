@@ -10,3 +10,15 @@ export const asStateName = stateCode => {
     }
     return `位置状态${stateCode}`;
 };
+const orderStateList = [];
+for (const code in stateTable) {
+    if (!stateTable.hasOwnProperty(code)) {
+        continue;
+    }
+    orderStateList.push({
+        code: code,
+        name: stateTable[code]
+    });
+}
+
+export const orderStateTable = orderStateList;

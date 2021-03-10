@@ -4,6 +4,7 @@ import './ContentHeader.less';
 import {withRouter} from 'react-router-dom';
 import mapStore from '../store/storeAutoMapper';
 import avatarImage from '../image/animation.jpg';
+import Logo from '../image/logo.png';
 
 const {Header} = Layout;
 
@@ -44,7 +45,9 @@ class ContentHeader extends Component {
         return (
             <Header className="content-header">
                 <span className="logo">
-                    Agile-ERP(MonolithIoT)
+                    <div className="logo-wrapper">
+                        <img src={Logo} alt="Agile-ERP"/>
+                    </div>
                 </span>
                 <Menu theme="dark" mode="horizontal" onClick={item => this.onMenuClick(item)}>
                     <Menu.Item key="console_home">控制台</Menu.Item>

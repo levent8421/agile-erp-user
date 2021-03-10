@@ -27,6 +27,7 @@ class ConsoleMarketOrderDetails extends Component {
     }
 
     render() {
+        const {order} = this.state;
         return (
             <div className="order-details">
                 asdas
